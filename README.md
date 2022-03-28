@@ -104,3 +104,9 @@ MariaDB [(none)]> exit
 Bye
 
 
+MariaDB [(none)]> create user 'test'@'%' identified by 'test@123';
+Query OK, 0 rows affected (0.00 sec)
+
+MariaDB [(none)]> exit
+Bye
+[ec2-user@db1 ~]$
