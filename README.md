@@ -62,3 +62,45 @@ MariaDB [(none)]> SHOW MASTER STATUS;
 
 MariaDB [(none)]> UNLOCK TABLES;
 Query OK, 0 rows affected (0.00 sec)
+
+
+
+
+
+[root@ip-172-31-32-183 ~]# mysql -u root
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 2
+Server version: 5.5.68-MariaDB MariaDB Server
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> CHANGE MASTER TO
+    -> MASTER_HOST='172.31.46.194',
+    -> MASTER_USER='test_master',
+    -> MASTER_PASSWORD='test_master',
+    -> MASTER_PORT=3306,
+    -> MASTER_LOG_FILE='mariadb-bin.000001',
+    -> MASTER_LOG_POS=584,
+    -> MASTER_CONNECT_RETRY=10;
+Query OK, 0 rows affected (0.01 sec)
+
+MariaDB [(none)]> START SLAVE;
+Query OK, 0 rows affected (0.00 sec)
+
+MariaDB [(none)]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| test               |
++--------------------+
+4 rows in set (0.00 sec)
+
+MariaDB [(none)]> exit
+Bye
+
+
