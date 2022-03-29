@@ -52,7 +52,7 @@ Restart mariadb on both servers
 Access mysql on DB1:
 ```
 mysql -u root -p
-grant replication slave on *.* to master_user1 identified by 'password';
+grant replication slave on *.* to master_user1 identified by 'password@123';
 flush privileges;
 flush tables with read lock;
 MariaDB [(none)]> show master status;
@@ -68,7 +68,7 @@ MariaDB [(none)]> show master status;
 Access mysql on DB2:
 ```
 mysql -u root -p
-grant replication slave on *.* to master_user2 identified by 'password';
+grant replication slave on *.* to master_user2 identified by 'password@123';
 flush privileges;
 flush tables with read lock;
 MariaDB [(none)]> show master status;
