@@ -1,4 +1,4 @@
-# MariaDB Master-Master/Slave Replication
+# MariaDB Master-Master Replication
 
 
 [![Build](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
@@ -12,7 +12,7 @@ In a Master-Master replication scheme, any of the MariaDB/MySQL database servers
 ## Pre-Requests
 ```
 One Mysql client server : AWS linux Ec2
-Two DB servers named DB1 and DB2 for our Master-Master/Slave Replication with private IPs
+Two DB servers named DB1 and DB2 for our Master-Master Replication with private IPs
 ```
 
 ### Lets go to the deployment
@@ -180,6 +180,7 @@ Enter password:
 
 ## Conclusion
 
+Succesfulyy created Master-Master Replication mariadb servers.
 
 #### ⚙️ Connect with Me
 
